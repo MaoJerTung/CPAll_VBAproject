@@ -1,0 +1,18 @@
+Part วางโปรออนไลน์
+1.LastRow = [COUNTA (A:A)]
+    Range("L2:L" & LastRow).Sort Key1:=Range("L2"), _
+                     Order1:=xlAscending, _
+                     Header:=xlYes
+2.insert column A
+3.วางสูตร =IF(N1="",TODAY()>M1,TODAY()>N1)
+4.Range("A3").copy
+5.Range("A3:A" & LastRow).pastespecial xlpasteformulas
+6.Range("A2:A" & LastRow).Sort Key1:=Range("A2"), _
+                     Order1:=xlDescending, _
+                     Header:=xlYes
+7.ActiveSheet.Range("A2:A" & LastRow).AutoFilter Field:=1, Criteria1:="TRUE"
+8.Range("A3:AB" & LastRow).clearcontents
+
+ตอนอัพ Dcitem และ dcitem&Xp
+1.หลังอัพเสร็จแต่ละคลัง ให้ไปcopy สูตรคิดวันที่ตั้งแต่ช่อง A3:F3
+2.paste value ตั้งแต่ A4: F & lastlow
